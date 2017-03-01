@@ -6,9 +6,9 @@ https://www.github.com/roboime/pfc-jan-bramigk/
 
 ## Requisitos
 
-'sudo apt-get install texlive-latex-base'
-'sudo apt-get install texlive-latex-extra'
-'sudo apt-get install latex2html'
+`sudo apt-get install texlive-latex-base`
+`sudo apt-get install texlive-latex-extra`
+`sudo apt-get install latex2html`
 
 Para obter o arquivo abntex2.cls:
 'sudo apt-get install texlive-publishers'
@@ -34,5 +34,3 @@ Convenções:
 - prefixe labels de imagens com `fig:`
 - prefixe labels de equações com `eq:`
 - prefixe labels de capítulos com `cap:`
-
-[pdf]:   https://www.sharelatex.com/github/repos/roboime/pfc-jan-bramigk/builds/latest/output.pdf
