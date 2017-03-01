@@ -11,17 +11,17 @@ https://www.github.com/roboime/pfc-jan-bramigk/
 `sudo apt-get install latex2html`
 
 Para obter o arquivo abntex2.cls:
-'sudo apt-get install texlive-publishers'
+`sudo apt-get install texlive-publishers`
 
 Conferir se as linhas 156-218 estão comentadas
 
 linha 84 de CMakeLists.txt precisa ter '_consideracoes.tex' em vez de 'cons_finais.tex'
 
 Após as dependências estarem construídas, digitar os comandos:
-cd "pasta do projeto"
-mkdir build
-cd build
-cmake .. && make pdf
+`cd "pasta do projeto"`
+`mkdir build`
+`cd build`
+`cmake .. && make pdf`
 
 ## Interno
 
