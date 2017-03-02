@@ -16,11 +16,24 @@ Para obter o arquivo abntex2.cls:
 
 `sudo apt-get install texlive-publishers`
 
+Para instalar o pacote brazil.ldf:
+
+`sudo apt-get install texlive-lang-portuguese`
+
+Para instalar o pacote algorithm2e.sty:
+
+`sudo apt-get install texlive-science`
+
+Instalar o pygmentize, para o pacote minted funcionar,
+baixei o código fonte em:
+https://pypi.python.org/pypi/Pygments#downloads
+
 Conferir se as linhas 156-218 estão comentadas
 
 linha 84 de CMakeLists.txt precisa ter '_consideracoes.tex' em vez de 'cons_finais.tex'
 
 Após as dependências estarem construídas, digitar os comandos:
+
 `cd "pasta do projeto"`
 
 `mkdir build`
