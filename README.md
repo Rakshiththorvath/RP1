@@ -46,11 +46,11 @@ Após as dependências estarem construídas, digitar os comandos:
 
 Criar os documentos preferencialmente na pasta `/doc`
 
-Copiar os modelos de doc/modelagem para capítulos e de doc/ssl para seções
+Copiar os modelos de `doc/modelagem.tex` para capítulos e de `doc/ssl.tex` para seções
 
 alterar os "cabeçalhos" dos arquivos, substituir texto
 
-Inserí-los no texto com o comando \input{doc/nome_sem_extensao}
+Inserí-los no texto com o comando `\input{doc/nome_sem_extensao}`
 
 Lembrar de adicioná-los em CMakeLists.txt, na seção DOC (IMG para imagens)
  
