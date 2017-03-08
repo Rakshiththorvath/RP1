@@ -89,6 +89,16 @@ set(DOC
   doc/results/see_enemy_goal.tex
   doc/results/block_goal.tex
   doc/results/min_gap_kick.tex
+  #PÍCOLI
+  doc/overview.tex
+  doc/com_spi.tex
+  doc/necessidade_abstr_hw.tex
+  doc/bibl_cpp.tex
+  doc/design_placas.tex
+  doc/placa_mae.tex
+  doc/modulo_motor.tex
+  doc/modulo_chute.tex
+  doc/larc_2016.tex
 )
 
 set(IMG
