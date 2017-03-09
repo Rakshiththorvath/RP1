@@ -13,9 +13,14 @@ Normalmente, o SPI se conecta a dispositivos externos por 4 pinos:
 
 Os pinos MOSI do mestre e do escravo são conectados, assim como os pinos MISO. Dessa forma, os dados são transferidos serialmente entre mestre e escravo (o bit mais significativo primeiro).
 A comunicação é sempre iniciada pelo mestre. Quando o mestre transmite dados para um escravo através do pino MOSI, o escravo responde através do pino MISO. Isso implica uma comunicação full-duplex com dados de saída e de entrada sincronizados pelo mesmo sinal de relógio (provido pelo mestre através do pino SCK).
-A FIGURA ilustra o processo de comunicação com um mestre e um escravo.
+A Figura~\ref{fig:spi} ilustra o processo de comunicação com um mestre e um escravo.
 
-FIGURA!!
+\begin{figure}
+	\centering
+	\includegraphics[scale=1]{SPI}
+	\caption{Esquema da Comunicação SPI}
+	\label{fig:spi}
+\end{figure}
 
 Para aprender a controlar a interface SPI do módulo de controle (mestre da comunicação), foram inicialmente feitos códigos em linguagem C, nos quais era feita a ativação do relógio do GPIO do pino NSS, configuração deste GPIO, a configuração dos registradores do periférico de SPI da Discovery e o envio de comandos para leitura de registradores do NRF24.
 Após isso, foi feita a biblioteca, em C, para comunicação SPI para este microcontrolador, tendo sempre o manual de referência da STM como guia.

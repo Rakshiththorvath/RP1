@@ -155,6 +155,17 @@ set(IMG
   img/xadrez.jpg
   img/mod_comp.jpg
   img/uml_comm.png
+  #PÍCOLI
+  img/modulo_controle.jpg
+  img/modulo_chute.jpg
+  img/modulo_motor.png
+  img/modulo_placa_mae.png
+  img/modulo_transmissao.png
+  img/SPI.png
+  img/funcionamento_hw.jpeg
+  img/blocos_placa_mae.jpeg
+  img/blocos_motor.jpeg
+  img/blocos_chute.jpeg
 )
 
 set(PROTO

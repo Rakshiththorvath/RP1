@@ -1,10 +1,21 @@
 \section{Placa Mãe}\label{sec:placa_mae}
 
-A placa-mãe (FIGURA) é responsável por fazer a ligação entre os atuadores do robô, transmitindo potência da bateria para os módulos de motor e de chute, fazendo a ligação entre esses módulos e os respectivos atuadores, fornecendo tensão aos circuitos lógicos e fazendo a ligação entre o módulo de controle e os sensores do robô -, no caso um sensor de quadratura em cada motor e o sensor ótico do chute que verifica a posse da bola. 
+A placa-mãe (Figura~\ref{fig:modulo_placa_mae}) é responsável por fazer a ligação entre os atuadores do robô, transmitindo potência da bateria para os módulos de motor e de chute, fazendo a ligação entre esses módulos e os respectivos atuadores, fornecendo tensão aos circuitos lógicos e fazendo a ligação entre o módulo de controle e os sensores do robô -, no caso um sensor de quadratura em cada motor e o sensor ótico do chute que verifica a posse da bola. 
 
-Figura 5 - Diagrama de blocos da placa mãe
+\begin{figure}
+	\centering
+	\includegraphics[scale=1]{modulo_placa_mae}
+	\caption{Módulo da placa-mãe}
+	\label{fig:modulo_placa_mae}
+\end{figure}
 
-Figura 6 - Módulo da placa-mãe
+\begin{figure}
+	\centering
+	\includegraphics[scale=1]{blocos_placa_mae}
+	\caption{Diagrama de blocos da placa mãe}
+	\label{fig:blocos_placa_mae}
+\end{figure}
+
 Para que as conexões elétricas através da placa sejam feitas de modo seguro, a placa mãe contém um fusível, um capacitor de tanque, um capacitor de desacoplamento, e um sensor de corrente, o chip INA220, na entrada de cada módulo de motor e na entrada do módulo de chute, além de um circuito de divisão de tensão para que o módulo de controle seja capaz de controlar o nível de tensão da bateria.
 O controle dessa placa é feito no firmware através da classe INA220, que faz a comunicação com os sensores de corrente na placa e a classe bateria que controla o nível da bateria sendo usada pelo robô. Essas classes permitem o controle dos circuitos de segurança do robô de maneira que o firmware possa lidar com comportamentos anômalos.
 O desenho dessa placa foi reformulado:
