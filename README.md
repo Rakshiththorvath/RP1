@@ -53,6 +53,8 @@ alterar os "cabeçalhos" dos arquivos, substituir texto
 Inserí-los no texto com o comando `\input{doc/nome_sem_extensao}`
 
 Lembrar de adicioná-los em CMakeLists.txt, na seção DOC (IMG para imagens)
+
+Observar comentários com `@PÍCOLI` ou `PÍCOLI`, há varias coisas que já foram implementadas no projeto original (pfc), mas que foram desabilitadas para o RP1 (e.g. folha de rosto(?), ficha catalográfica, resumo/abstract, folha de aprovação)
  
 ## Interno
 
