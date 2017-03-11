@@ -99,33 +99,42 @@ possibilidades.  O resultado é que a qualidade das jogadas se limita a
 capacidade de quem cria as heurísticas.
 
 \section{Objetivo}
+%
+%O objetivo deste trabalho é desenvolver uma ferramenta de representação
+%comportamental baseado em otimização para futebol de robôs.
+%%O objetivo deste trabalho é desenvolver um algoritmo de controle para o futebol
+%%de robôs que obtenha um desempenho melhor que o utilizado atualmente, de acordo
+%%com a performance em um conjunto de partidas.
+%A meta intermediária é criar um modelo discreto sequencial para o problema do
+%futebol de robôs.  A partir desta discretização, foi desenvolvida uma arquitetura
+%de controle que seleciona jogadas o mais próximas da jogada ótima possível, de
+%acordo com uma função de avaliação e dentro do tempo disponível para o
+%planejamento.
 
-O objetivo deste trabalho é desenvolver uma ferramenta de representação
-comportamental baseado em otimização para futebol de robôs.
-%O objetivo deste trabalho é desenvolver um algoritmo de controle para o futebol
-%de robôs que obtenha um desempenho melhor que o utilizado atualmente, de acordo
-%com a performance em um conjunto de partidas.
-A meta intermediária é criar um modelo discreto sequencial para o problema do
-futebol de robôs.  A partir desta discretização, foi desenvolvida uma arquitetura
-de controle que seleciona jogadas o mais próximas da jogada ótima possível, de
-acordo com uma função de avaliação e dentro do tempo disponível para o
-planejamento.
+
+O objetivo deste projeto é desenvolver a eletrônica embarcada e o \textit{firmware} para um time de robôs autônomos, da categoria \textit{Small Size Robot League}, a fim de viabilizar a participação de uma equipe de professores e alunos em uma competição internacional de robótica.
+
+O problema proposto é a implementação de uma equipe de futebol de robôs autônomos e cooperativos. Dentro dele, existem vários problemas específicos como comunicação entre máquinas, aprendizagem, planejamento em tempo real, decisão estratégica, tática, comportamento, visão, controle, locomoção e sistemas sensoriais não simbólicos. 
+
+O futebol de robôs consiste em um controle distribuído, onde vários agentes têm de agir autonomamente e coordenar-se além de cooperar para atingir um objetivo comum. O problema se torna crítico, uma vez que o ambiente é dinâmico e  a mudança de estado é em tempo real. Faz-se necessária uma comunicação rápida, um controle preciso e um sistema operacional de tempo real  (RTOS) para harmonizar a execução simultânea dessas e outras tarefas. Um sistema operacional de tempo real é um sistema computacional que deve reagir a estímulos oriundos do seu ambiente em prazos específicos de natureza temporal. No desenvolvimento de robôs móveis é inevitável o conflito entre fatores como peso do robô, consumo de energia, dimensão e capacidade de baterias, e ainda,a capacidade computacional da maneira a obter o melhor rendimento possível do robô. Além disso, ainda há problemas como latência, durante a comunicação e a interdependência de diversos sistemas. 
 
 \section{Justificativa}
 % TODO: incluir referências
 
-Uma arquitetura de controle que simule os diversos ambientes dinamicamente de
-maneira sequencial de um ambiente multi-agente permite que várias jogadas sejam
-criadas dinamicamente, diferentemente de uma arquitetura estática baseada
-somente em heurística.  Essa abordagem heurística tem origem na maneira como
-estratégias são planejadas nos times de futebol humano.
+%Uma arquitetura de controle que simule os diversos ambientes dinamicamente de
+%maneira sequencial de um ambiente multi-agente permite que várias jogadas sejam
+%criadas dinamicamente, diferentemente de uma arquitetura estática baseada
+%somente em heurística.  Essa abordagem heurística tem origem na maneira como
+%estratégias são planejadas nos times de futebol humano.
+%
+%Com tal mecanismo é possível melhorar a IA em uso pela RoboIME para tomar
+%decisões que levem a resultados melhores e, como consequência, ganhar mais
+%partidas.  Nenhuma equipe atualmente esta seguindo esta abordagem, mas os
+%autores acreditam que essa é uma linha de pesquisa promissora, já que se utiliza
+%da capacidade que o computador tem de simular várias possibilidades em um curto
+%intervalo de tempo.
 
-Com tal mecanismo é possível melhorar a IA em uso pela RoboIME para tomar
-decisões que levem a resultados melhores e, como consequência, ganhar mais
-partidas.  Nenhuma equipe atualmente esta seguindo esta abordagem, mas os
-autores acreditam que essa é uma linha de pesquisa promissora, já que se utiliza
-da capacidade que o computador tem de simular várias possibilidades em um curto
-intervalo de tempo.
+A \textit{RoboCup} é uma iniciativa de apelo público para a promoção da pesquisa em robótica e Inteligência Artificial, através de um desafio formidável. Um dos modos efetivos de promover a pesquisa em engenharia, além do desenvolvimento de aplicações específicas, é o estabelecimento de um objetivo de longo termo. Quando a conquista de tal objetivo tem um impacto social significativo, este é denominado de um projeto de grande desafio. Apenas construir um robô para jogar futebol não gera um impacto social ou econômico considerável, mas a conquista representa um grande avanço para a área. 
 
 \section{Metodologia}
 
@@ -138,17 +147,30 @@ ajusta a função citada, bem como o método de busca utilizado.
 
 \section{Estrutura}
 
-% modelagem
-No Capítulo~\ref{cap:modelagem}, um modelo do futebol de robôs é proposto.
-Também é apresentada a função de avaliação.
+%\input{doc/overview}
+%\input{doc/com_spi}
+%\input{doc/necessidade_abstr_hw}
+%\input{doc/bibl_cpp}
+%\input{doc/design_placas}
+%\input{doc/larc_2016}
 
-% arquitetura
-No Capítulo~\ref{cap:arquitetura}, a ferramenta proposta é desenvolvida com
-base no modelo proposto anteriormente.
+% overview
+No Capítulo~\ref{cap:overview}, uma visão geral do projeto físico do robôs é proposto.
 
-% resultados
-No Capítulo~\ref{cap:resultados}, são apresentados os resultados obtidos
-neste trabalho.
+% com_spi
+No Capítulo~\ref{cap:com_spi}, é explicado o protocolo de comunicação utilizado pelo transmissor(responsável por receber comandos através de enlace de rádio) para se comunicar com o módulo controlador do robô.
+
+% necessidade_abstr_h
+No Capítulo~\ref{cap:necessidade_abstr_h}, são explicados os motivos que levaram à refatoração das bibliotecas de comunicação SPI e do módulo transmissor para adotar o conceito de abstração de \textit{hardware} e a linguagem C++. 
+
+% bibl_cpp
+No Capítulo~\ref{cap:bibl_cpp}, é falado sobre o processo de reescrita das referidas bibliotecas.
+
+% design_placas
+No Capítulo~\ref{cap:design_placas}, é falado sobre o processo de \textit{design} das novas placas de circuito impresso a serem usadas no projeto.
+
+% larc_2016
+No Capítulo~\ref{cap:larc_2016}, fala-se sobre a participação da RoboIME na \textit{Latin American Robotics Competition}(LARC).
 
 % considerações finais
 %No Capítulo~\ref{cap:cons_finais}, são apresentadas sugestões para trabalhos
