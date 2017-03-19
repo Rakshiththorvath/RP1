@@ -72,7 +72,7 @@
     DEPARTAMENTO DE CIÊNCIA E TECNOLOGIA\\
     INSTITUTO MILITAR DE ENGENHARIA\\
     (Real Academia de Artilharia, Fortificação e Desenho/1792)\\
-    CURSO DE GRADUAÇÃO EM ENGENHARIA DE COMPUTAÇÃO}
+    SEÇÃO DE ENGENHARIA DE SISTEMAS/SE9}
 
   \vfill
 
