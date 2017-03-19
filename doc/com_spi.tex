@@ -1,6 +1,6 @@
 \chapter{Comunicação SPI}\label{cap:com_spi}
 
-A interface periférica serial (SPI) permite comunicação serial half/ full-duplex, síncrona, com dispositivos externos. A interface pode ser configurada como mestre, caso em que fornece o sinal de relógio da comunicação (SCK) ao dispositivo externo escravo (\textit{slave}). A interface também é capaz de operar em configuração \textit{multimaster}.
+A interface periférica serial (SPI) permite comunicação serial \textit{half/ full-duplex}, síncrona, com dispositivos externos. A interface pode ser configurada como mestre, caso em que fornece o sinal de relógio da comunicação (SCK) ao dispositivo externo escravo (\textit{slave}). A interface também é capaz de operar em configuração \textit{multimaster}.
 Pode ser usada para uma variedade de propósitos, inclusive transferências síncronas simplex em duas linhas com uma possível linha de dados bidirecional ou comunicação confiável usando checagem CRC.
 Normalmente, o SPI se conecta a dispositivos externos por 4 pinos:
 \begin{itemize}
@@ -22,7 +22,7 @@ A Figura~\ref{fig:spi} ilustra o processo de comunicação com um mestre e um es
 \end{figure}
 
 Para aprender a controlar a interface SPI do módulo de controle (mestre da comunicação), foram inicialmente feitos códigos em linguagem C, nos quais era feita a ativação do relógio do GPIO do pino NSS, configuração deste GPIO, a configuração dos registradores do periférico de SPI da \textit{Discovery} e o envio de comandos para leitura de registradores do NRF24.
-Após isso, foi feita a biblioteca, em C, para comunicação SPI para este microcontrolador, tendo sempre o manual de referência da \textit{STMicroelectronics} como guia.
+Após isso, foi feita a biblioteca, em C, para comunicação SPI para este microcontrolador, tendo sempre o manual de referência da \textit{STMicroelectronics}\cite{stm32f4referencemanual} como guia.
 
 % Ramificação constante ou taxa constante
 
